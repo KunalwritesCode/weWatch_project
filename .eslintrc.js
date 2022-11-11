@@ -10,7 +10,11 @@ module.exports = {
   overrides: [
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
+    "ecmaFeatures": {
+      "jsx": true
+  },
+
+    ecmaVersion: '12',
     sourceType: 'module',
   },
   plugins: [
@@ -23,6 +27,13 @@ module.exports = {
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'max-len': [
       2,
       250,
